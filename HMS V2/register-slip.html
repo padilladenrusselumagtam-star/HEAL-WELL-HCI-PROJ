@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Slip</title>
+    <link rel="stylesheet" href="css/register-slip.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-brand">HospitalMS</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <span class="welcome-user" id="welcomeUser">Welcome, Staff</span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="slip-container">
+        <div class="slip-header">
+            <h1>Registration Complete</h1>
+            <p>Patient has been successfully registered</p>
+        </div>
+
+        <div class="slip-actions">
+            <button onclick="printSlip()" class="btn-primary">Print Registration Slip</button>
+            <button onclick="location.href='dashboard.html'" class="btn-secondary">Back to Dashboard</button>
+        </div>
+
+        <div class="registration-slip" id="registrationSlip">
+            <div class="slip-logo">
+                <h2>General Hospital</h2>
+                <p>Patient Registration Slip</p>
+            </div>
+            
+            <div class="slip-content">
+                <div class="slip-section">
+                    <h3>Patient Information</h3>
+                    <div class="slip-grid" id="patientSlipInfo"></div>
+                </div>
+                
+                <div class="slip-section">
+                    <h3>Registration Details</h3>
+                    <div class="slip-grid">
+                        <div class="slip-item">
+                            <span class="slip-label">Patient ID:</span>
+                            <span class="slip-value" id="patientId"></span>
+                        </div>
+                        <div class="slip-item">
+                            <span class="slip-label">Registration Date:</span>
+                            <span class="slip-value" id="registrationDate"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slip-footer">
+                    <p>This slip confirms successful registration with General Hospital.</p>
+                    <p>Please present this slip during your visits.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/register-slip.js"></script>
+    <script src="shared.js"></script>
+</body>
+</html>

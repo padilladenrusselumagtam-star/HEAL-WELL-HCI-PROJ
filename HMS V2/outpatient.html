@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpatient Management</title>
+    <link rel="stylesheet" href="css/outpatient.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-brand">HospitalMS</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="inpatient.html">Inpatient</a>
+            <span class="welcome-user" id="welcomeUser">Welcome, Staff</span>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <div class="outpatient-container">
+        <div class="outpatient-header">
+            <h1>Outpatient Management</h1>
+            <p>Manage outpatient visits and follow-ups</p>
+        </div>
+
+        <div class="outpatient-content">
+            <div class="visits-section">
+                <h2>Recent Outpatient Visits</h2>
+                <div class="visits-list" id="visitsList"></div>
+            </div>
+
+            <div class="visit-details" id="visitDetails">
+                <div class="empty-state">
+                    <h3>Select a visit to view details</h3>
+                    <p>Choose a patient visit from the list to see medical records and follow-up information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/outpatient.js"></script>
+    <script src="shared.js"></script>
+</body>
+</html>

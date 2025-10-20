@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 600px;">
+            <div class="card" style="text-align: center;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+                <h2 style="color: var(--success-color); margin-bottom: 1rem;">Appointment Booked Successfully!</h2>
+                
+                <div style="background: #f0f8ff; padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+                    <p><strong>Reference Number:</strong></p>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary-color);" id="referenceNumber">-</div>
+                    
+                    <div style="margin-top: 1.5rem; text-align: left;">
+                        <p><strong>Patient:</strong> <span id="patientName">-</span></p>
+                        <p><strong>Date & Time:</strong> <span id="appointmentDate">-</span> at <span id="appointmentTime">-</span></p>
+                        <p><strong>Doctor:</strong> <span id="doctorName">-</span></p>
+                        <p><strong>Service:</strong> <span id="packageName">-</span></p>
+                    </div>
+                </div>
+
+                <div style="margin: 2rem 0; padding: 1.5rem; background: #fff3e0; border-radius: 5px; text-align: left;">
+                    <h4 style="margin-bottom: 1rem;">Important Instructions:</h4>
+                    <ul style="text-align: left;">
+                        <li>Please arrive 15 minutes before your scheduled appointment</li>
+                        <li>Bring your valid ID and insurance card (if applicable)</li>
+                        <li>Carry any previous medical records or test results</li>
+                        <li>For cancellations, call (02) 1234-5678 at least 24 hours in advance</li>
+                    </ul>
+                </div>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                    <button onclick="printConfirmation()" class="btn btn-primary">Print Confirmation</button>
+                    <a href="dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="booking-confirm.js"></script>
+</body>
+</html>

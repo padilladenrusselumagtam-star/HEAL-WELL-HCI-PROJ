@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" style="max-width: 400px; margin-top: 100px;">
+        <div class="card">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem;">Heal Well Hospital</h1>
+                <p style="color: var(--dark-gray);">Please login to continue</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Role (Optional)</label>
+                    <select id="role" class="form-select">
+                        <option value="">Any Role</option>
+                        <option value="Admin">Administrator</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Staff">Staff</option>
+                        <option value="Patient">Patient</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Login</button>
+                
+                <div style="text-align: center; margin: 1rem 0;">
+                    <span style="color: var(--dark-gray);">Don't have an account? </span>
+                    <a href="register-user.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Register here</a>
+                </div>
+            </form>
+            
+            <div id="demoAccounts" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 1rem; font-size: 1rem; color: var(--dark-gray);">Demo Accounts:</h3>
+            </div>
+        </div>
+    </div>
+    
+    <script src="shared.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" style="max-width: 500px; margin-top: 50px;">
+        <div class="card">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1 style="color: var(--primary-color); margin-bottom: 0.5rem;">Create Account</h1>
+                <p style="color: var(--dark-gray);">Register for a new user account</p>
+            </div>
+            
+            <form id="registerForm">
+                <div class="grid grid-2">
+                    <div class="form-group">
+                        <label class="form-label">First Name *</label>
+                        <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Last Name *</label>
+                        <input type="text" id="lastName" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Username *</label>
+                    <input type="text" id="regUsername" class="form-control" required>
+                    <small style="color: var(--dark-gray);">Choose a unique username</small>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                
+                <div class="grid grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Password *</label>
+                        <input type="password" id="regPassword" class="form-control" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Confirm Password *</label>
+                        <input type="password" id="confirmPassword" class="form-control" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Role *</label>
+                    <select id="regRole" class="form-select" required>
+                        <option value="">Select Role</option>
+                        <option value="Patient">Patient</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Staff">Staff</option>
+                    </select>
+                    <small style="color: var(--dark-gray);">Admin accounts can only be created by existing administrators</small>
+                </div>
+                
+                <div id="patientFields" style="display: none;">
+                    <div class="form-group">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" id="dob" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Contact Number</label>
+                        <input type="tel" id="contact" class="form-control">
+                    </div>
+                </div>
+                
+                <div id="doctorFields" style="display: none;">
+                    <div class="form-group">
+                        <label class="form-label">Specialization</label>
+                        <input type="text" id="specialization" class="form-control" placeholder="e.g., Cardiology, Pediatrics">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Medical License Number</label>
+                        <input type="text" id="license" class="form-control">
+                    </div>
+                </div>
+                
+                <div id="staffFields" style="display: none;">
+                    <div class="form-group">
+                        <label class="form-label">Department</label>
+                        <input type="text" id="department" class="form-control" placeholder="e.g., Registration, Billing">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Employee ID</label>
+                        <input type="text" id="employeeId" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label style="display: flex; align-items: center; gap: 10px;">
+                        <input type="checkbox" id="termsCheck" required>
+                        <span>I agree to the <a href="#" style="color: var(--primary-color);">Terms of Service</a> and <a href="#" style="color: var(--primary-color);">Privacy Policy</a></span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Create Account</button>
+                
+                <div style="text-align: center;">
+                    <span style="color: var(--dark-gray);">Already have an account? </span>
+                    <a href="login.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="shared.js"></script>
+    <script src="register-user.js"></script>
+</body>
+</html>

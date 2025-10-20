@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Record - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 1000px;">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Medical Record</h1>
+                    <div style="display: flex; gap: 10px;">
+                        <button id="printBtn" class="btn btn-outline">Print</button>
+                        <button id="editBtn" class="btn btn-secondary">Edit</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h3>Patient Information</h3>
+                        <div class="info-item"><strong>Record ID:</strong> <span id="recordId">-</span></div>
+                        <div class="info-item"><strong>Patient Name:</strong> <span id="patientName">-</span></div>
+                        <div class="info-item"><strong>Date:</strong> <span id="recordDate">-</span></div>
+                        <div class="info-item"><strong>Doctor:</strong> <span id="doctorName">-</span></div>
+                    </div>
+                    <div>
+                        <h3>Vital Signs</h3>
+                        <div class="info-item"><strong>Blood Pressure:</strong> <span id="bloodPressure">-</span></div>
+                        <div class="info-item"><strong>Heart Rate:</strong> <span id="heartRate">-</span></div>
+                        <div class="info-item"><strong>Temperature:</strong> <span id="temperature">-</span></div>
+                        <div class="info-item"><strong>Weight/Height:</strong> <span id="weight">-</span> / <span id="height">-</span></div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3>Diagnosis & Symptoms</h3>
+                    <div class="info-item"><strong>Diagnosis:</strong> <span id="diagnosis">-</span></div>
+                    <div class="info-item"><strong>Symptoms:</strong> <span id="symptoms">-</span></div>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3>Prescriptions</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Medication</th>
+                                <th>Dosage</th>
+                                <th>Duration</th>
+                                <th>Instructions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="prescriptionsList">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3>Clinical Notes</h3>
+                    <p id="notes" style="background: #f5f5f5; padding: 1rem; border-radius: 5px;"></p>
+                </div>
+
+                <div>
+                    <h3>Attached Laboratory Results</h3>
+                    <div id="attachedLabs" class="grid grid-2">
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                <button id="backBtn" class="btn btn-outline">Back to Medical Records</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="medical-record-view.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Bill - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 800px;">
+            <div class="card">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Create Bill</h2>
+
+                <form id="billingForm">
+                    <div class="grid grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Select Patient *</label>
+                            <select id="patientSelect" class="form-select" required>
+                                <option value="">Select Patient</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Bill Date *</label>
+                            <input type="date" id="billDate" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 2rem 0 1rem 0;">Bill Items</h3>
+                    <div id="billItems">
+                        <div class="bill-item-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr auto auto; gap: 10px; margin-bottom: 10px; align-items: center;">
+                            <input type="text" class="item-desc form-control" placeholder="Description" required>
+                            <input type="number" class="item-qty form-control" placeholder="Qty" value="1" min="1" required>
+                            <input type="number" class="item-cost form-control" placeholder="Unit Cost" step="0.01" required>
+                            <span class="item-total">0.00</span>
+                            <button type="button" class="btn-remove" onclick="this.parentElement.remove()">×</button>
+                        </div>
+                    </div>
+                    <button type="button" id="addItemBtn" class="btn btn-outline">Add Item</button>
+
+                    <h3 style="margin: 2rem 0 1rem 0;">Bill Summary</h3>
+                    <div style="background: #f5f5f5; padding: 1.5rem; border-radius: 5px;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <div class="form-group">
+                                    <label style="display: flex; align-items: center; gap: 10px;">
+                                        <input type="checkbox" id="applyTax">
+                                        <span>Apply 12% Tax</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Discount Amount</label>
+                                    <input type="number" id="discountAmount" class="form-control" step="0.01" value="0">
+                                </div>
+                            </div>
+                            <div>
+                                <div style="margin-bottom: 1rem;">
+                                    <strong>Subtotal:</strong> <span id="subtotalAmount">₱0.00</span>
+                                </div>
+                                <div style="margin-bottom: 1rem;">
+                                    <strong>Tax:</strong> <span id="taxAmount">₱0.00</span>
+                                </div>
+                                <div style="margin-bottom: 1rem;">
+                                    <strong>Discount:</strong> <span id="discountDisplay">₱0.00</span>
+                                </div>
+                                <div style="font-size: 1.2rem; font-weight: bold;">
+                                    <strong>TOTAL:</strong> <span id="totalAmount">₱0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                        <a href="billing.html" class="btn btn-outline">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Create Bill</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="billing-add.js"></script>
+</body>
+</html>

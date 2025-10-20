@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="medical-records.html">Medical Records</a></li>
+                    <li><a href="billing.html">Billing</a></li>
+                    <li><a href="laboratory.html">Laboratory</a></li>
+                </ul>
+                
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="search-box">
+                <form id="searchForm" style="display: flex; gap: 10px;">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search patients by ID or name...">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="upcomingAppointments">0</div>
+                    <div class="stat-label">Upcoming Appointments</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="medicalRecords">0</div>
+                    <div class="stat-label">Medical Records</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="treatmentProgress">0%</div>
+                    <div class="stat-label">Treatment Progress</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pendingBills">₱0.00</div>
+                    <div class="stat-label">Pending Bills</div>
+                </div>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Recent Activity</h2>
+                    </div>
+                    <ul id="recentActivity">
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Quick Actions</h2>
+                    </div>
+                    <div id="quickActions" class="quick-actions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Heal Well Hospital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

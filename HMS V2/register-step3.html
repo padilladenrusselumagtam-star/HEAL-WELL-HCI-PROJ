@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - Step 3 - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 600px;">
+            <div class="card">
+                <div class="step-indicator">
+                    <div class="step completed">
+                        <div class="step-number">1</div>
+                        <span>Personal Info</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step completed">
+                        <div class="step-number">2</div>
+                        <span>Medical Info</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step active">
+                        <div class="step-number">3</div>
+                        <span>Additional Info</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <span>Confirmation</span>
+                    </div>
+                </div>
+
+                <h2 style="text-align: center; margin-bottom: 2rem;">Additional Information</h2>
+
+                <form id="step3Form">
+                    <div class="form-group">
+                        <label class="form-label">Insurance Provider</label>
+                        <input type="text" id="insuranceProvider" class="form-control" placeholder="e.g., PhilHealth, Maxicare">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Insurance Number</label>
+                        <input type="text" id="insuranceNumber" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Occupation</label>
+                        <input type="text" id="occupation" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Marital Status</label>
+                        <select id="maritalStatus" class="form-select">
+                            <option value="">Select Status</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                        <button type="button" id="prevBtn" class="btn btn-outline">Previous</button>
+                        <button type="button" id="nextBtn" class="btn btn-primary">Next</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="register-step3.js"></script>
+</body>
+</html>

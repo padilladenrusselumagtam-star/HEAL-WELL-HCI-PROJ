@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="medical-records.html" class="active">Medical Records</a></li>
+                    <li><a href="billing.html">Billing</a></li>
+                    <li><a href="laboratory.html">Laboratory</a></li>
+                </ul>
+                
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="card-header">
+                <h1>Medical Records</h1>
+                <button id="addRecordBtn" class="btn btn-primary">Add Record</button>
+            </div>
+
+            <div class="filters">
+                <div class="filter-row">
+                    <div class="form-group">
+                        <label class="form-label">Patient</label>
+                        <select id="patientFilter" class="form-select">
+                            <option value="">All Patients</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Date From</label>
+                        <input type="date" id="dateFrom" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Date To</label>
+                        <input type="date" id="dateTo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Doctor</label>
+                        <select id="doctorFilter" class="form-select">
+                            <option value="">All Doctors</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button id="resetFilters" class="btn btn-outline">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Diagnosis</th>
+                            <th>Blood Pressure</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="medicalRecordsList">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="medical-records.js"></script>
+</body>
+</html>

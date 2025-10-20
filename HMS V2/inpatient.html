@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inpatient Management - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="medical-records.html">Medical Records</a></li>
+                    <li><a href="billing.html">Billing</a></li>
+                    <li><a href="inpatient.html" class="active">Inpatient</a></li>
+                </ul>
+                
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="card-header">
+                <h1>Inpatient Management</h1>
+                <button id="admitPatientBtn" class="btn btn-primary">Admit Patient</button>
+            </div>
+
+            <div class="card">
+                <h2 style="margin-bottom: 1rem;">Currently Admitted Patients</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Patient Name</th>
+                            <th>Admission Date</th>
+                            <th>Ward</th>
+                            <th>Diagnosis</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inpatientsList">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div id="admitPatientModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Admit Patient</h2>
+                <button class="close">&times;</button>
+            </div>
+            <form id="admitForm">
+                <div class="form-group">
+                    <label class="form-label">Select Patient *</label>
+                    <select id="admitPatientSelect" class="form-select" required>
+                        <option value="">Select Patient</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Admission Date *</label>
+                    <input type="date" id="admissionDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Ward *</label>
+                    <select id="ward" class="form-select" required>
+                        <option value="">Select Ward</option>
+                        <option value="General Ward">General Ward</option>
+                        <option value="Private Room">Private Room</option>
+                        <option value="ICU">Intensive Care Unit</option>
+                        <option value="Pediatric Ward">Pediatric Ward</option>
+                        <option value="Maternity Ward">Maternity Ward</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Admission Diagnosis</label>
+                    <textarea id="admissionDiagnosis" class="form-control" rows="3" placeholder="Primary diagnosis for admission"></textarea>
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 1rem;">
+                    <button type="button" class="btn btn-outline" onclick="document.getElementById('admitPatientModal').style.display='none'">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Admit Patient</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="shared.js"></script>
+    <script src="inpatient.js"></script>
+</body>
+</html>

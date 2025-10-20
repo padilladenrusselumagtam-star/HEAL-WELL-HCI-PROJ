@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 800px;">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Diet Plan</h1>
+                    <button id="printBtn" class="btn btn-outline">Print</button>
+                </div>
+
+                <div class="grid grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h3>Patient Information</h3>
+                        <div class="info-item"><strong>Patient Name:</strong> <span id="patientName">-</span></div>
+                        <div class="info-item"><strong>Created Date:</strong> <span id="createdDate">-</span></div>
+                        <div class="info-item"><strong>BMI:</strong> <span id="bmi">-</span></div>
+                        <div class="info-item"><strong>Target Weight:</strong> <span id="targetWeight">-</span></div>
+                    </div>
+                    <div>
+                        <h3>Nutrition Goals</h3>
+                        <div class="info-item"><strong>Daily Calories:</strong> <span id="caloriesPerDay">-</span></div>
+                        <div class="info-item"><strong>Current Weight:</strong> <span id="currentWeight">-</span></div>
+                        <div class="info-item"><strong>Weight History:</strong></div>
+                        <div id="weightChart" style="height: 100px; background: #f5f5f5; border-radius: 5px; margin-top: 10px;"></div>
+                    </div>
+                </div>
+
+                <div class="grid grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h3>Recommended Foods</h3>
+                        <ul id="allowedFoods" class="inclusions-list">
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Foods to Avoid</h3>
+                        <ul id="avoidFoods" class="inclusions-list">
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Nutrition Education</h3>
+                    <p id="education" style="background: #f5f5f5; padding: 1rem; border-radius: 5px; line-height: 1.6;"></p>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-top: 2rem;">
+                <button id="backBtn" class="btn btn-outline">Back to Diet Plans</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="diet-plan-view.js"></script>
+</body>
+</html>

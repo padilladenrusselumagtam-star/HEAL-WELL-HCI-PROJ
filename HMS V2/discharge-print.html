@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discharge Summary</title>
+    <link rel="stylesheet" href="css/discharge-print.css">
+</head>
+<body>
+    <div class="print-container">
+        <div class="discharge-summary" id="dischargeSummary">
+            <div class="summary-header">
+                <h1>General Hospital</h1>
+                <h2>Patient Discharge Summary</h2>
+            </div>
+            
+            <div class="summary-section">
+                <h3>Patient Information</h3>
+                <div class="summary-grid" id="patientSummary"></div>
+            </div>
+            
+            <div class="summary-section">
+                <h3>Hospitalization Details</h3>
+                <div class="summary-grid" id="hospitalizationDetails"></div>
+            </div>
+            
+            <div class="summary-section">
+                <h3>Discharge Information</h3>
+                <div class="summary-grid" id="dischargeInfo"></div>
+            </div>
+            
+            <div class="summary-section">
+                <h3>Follow-up Care Instructions</h3>
+                <div class="instructions" id="followupInstructions"></div>
+            </div>
+            
+            <div class="summary-section">
+                <h3>Medications at Discharge</h3>
+                <div class="medications" id="dischargeMedications"></div>
+            </div>
+            
+            <div class="summary-footer">
+                <div class="physician-signature">
+                    <p>Attending Physician: <span id="physicianName"></span></p>
+                    <div class="signature-line"></div>
+                    <p>Signature & Date</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="shared.js"></script>
+    <script src="js/discharge-print.js"></script>
+</body>
+</html>

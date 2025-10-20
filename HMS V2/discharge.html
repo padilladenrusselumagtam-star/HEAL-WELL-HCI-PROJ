@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discharge Patient - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 800px;">
+            <div class="card">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Discharge Patient</h2>
+
+                <div style="background: #f0f8ff; padding: 1.5rem; border-radius: 5px; margin-bottom: 2rem;">
+                    <h3>Patient Information</h3>
+                    <div class="info-item"><strong>Patient ID:</strong> <span id="patientId">-</span></div>
+                    <div class="info-item"><strong>Patient Name:</strong> <span id="patientName">-</span></div>
+                    <div class="info-item"><strong>Admission Date:</strong> <span id="admissionDate">-</span></div>
+                    <div class="info-item"><strong>Ward:</strong> <span id="ward">-</span></div>
+                    <div class="info-item"><strong>Admission Diagnosis:</strong> <span id="admissionDiagnosis">-</span></div>
+                </div>
+
+                <form id="dischargeForm">
+                    <div class="form-group">
+                        <label class="form-label">Discharge Date *</label>
+                        <input type="date" id="dischargeDate" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Discharge Diagnosis *</label>
+                        <input type="text" id="dischargeDiagnosis" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Condition at Discharge *</label>
+                        <select id="dischargeCondition" class="form-select" required>
+                            <option value="">Select Condition</option>
+                            <option value="Recovered">Recovered</option>
+                            <option value="Improved">Improved</option>
+                            <option value="Unchanged">Unchanged</option>
+                            <option value="Worsened">Worsened</option>
+                            <option value="Referred">Referred to another facility</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Discharge Summary</label>
+                        <textarea id="dischargeSummary" class="form-control" rows="4" placeholder="Summary of hospital course, treatment provided, and current status"></textarea>
+                    </div>
+
+                    <h3 style="margin: 2rem 0 1rem 0;">Discharge Medications</h3>
+                    <div id="dischargeMeds">
+                        <div class="medication-row" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto; gap: 10px; margin-bottom: 10px;">
+                            <input type="text" placeholder="Medication" required>
+                            <input type="text" placeholder="Dosage" required>
+                            <input type="text" placeholder="Duration" required>
+                            <input type="text" placeholder="Instructions">
+                            <button type="button" class="btn-remove" onclick="this.parentElement.remove()">×</button>
+                        </div>
+                    </div>
+                    <button type="button" id="addMedication" class="btn btn-outline">Add Medication</button>
+
+                    <h3 style="margin: 2rem 0 1rem 0;">Follow-up Instructions</h3>
+                    <div id="followupInstructions">
+                        <div class="followup-row" style="display: grid; grid-template-columns: 2fr 1fr auto; gap: 10px; margin-bottom: 10px;">
+                            <input type="text" placeholder="Instruction" required>
+                            <input type="date" placeholder="Follow-up Date">
+                            <button type="button" class="btn-remove" onclick="this.parentElement.remove()">×</button>
+                        </div>
+                    </div>
+                    <button type="button" id="addFollowup" class="btn btn-outline">Add Follow-up</button>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                        <a href="inpatient.html" class="btn btn-outline">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Process Discharge</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="discharge.js"></script>
+</body>
+</html>

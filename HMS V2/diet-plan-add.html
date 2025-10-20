@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Diet Plan - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 800px;">
+            <div class="card">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Create Diet Plan</h2>
+
+                <form id="dietPlanForm">
+                    <div class="form-group">
+                        <label class="form-label">Select Patient *</label>
+                        <select id="patientSelect" class="form-select" required>
+                            <option value="">Select Patient</option>
+                        </select>
+                    </div>
+
+                    <h3 style="margin: 2rem 0 1rem 0;">Body Metrics</h3>
+                    <div class="grid grid-3">
+                        <div class="form-group">
+                            <label class="form-label">Current Weight (kg) *</label>
+                            <input type="number" step="0.1" id="currentWeight" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Height (cm) *</label>
+                            <input type="number" id="height" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Target Weight (kg)</label>
+                            <input type="number" step="0.1" id="targetWeight" class="form-control">
+                        </div>
+                    </div>
+
+                    <div style="background: #f0f8ff; padding: 1rem; border-radius: 5px; margin: 1rem 0;">
+                        <strong>BMI Calculation:</strong>
+                        <span id="bmiResult">-</span> 
+                        <span id="bmiCategory" style="font-weight: bold;"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Daily Calorie Target</label>
+                        <input type="number" id="caloriesPerDay" class="form-control" placeholder="e.g., 2000">
+                    </div>
+
+                    <h3 style="margin: 2rem 0 1rem 0;">Food Recommendations</h3>
+                    <div class="grid grid-2">
+                        <div>
+                            <h4>Allowed Foods</h4>
+                            <div id="allowedFoods">
+                                <div class="food-item" style="display: flex; gap: 10px; margin-bottom: 10px;">
+                                    <input type="text" class="form-control" placeholder="Enter food item" required>
+                                    <button type="button" class="btn-remove" onclick="this.parentElement.remove()">×</button>
+                                </div>
+                            </div>
+                            <button type="button" id="addAllowedFood" class="btn btn-outline">Add Food</button>
+                        </div>
+                        <div>
+                            <h4>Foods to Avoid</h4>
+                            <div id="avoidFoods">
+                                <div class="food-item" style="display: flex; gap: 10px; margin-bottom: 10px;">
+                                    <input type="text" class="form-control" placeholder="Enter food item" required>
+                                    <button type="button" class="btn-remove" onclick="this.parentElement.remove()">×</button>
+                                </div>
+                            </div>
+                            <button type="button" id="addAvoidFood" class="btn btn-outline">Add Food</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Nutrition Education & Instructions</label>
+                        <textarea id="education" class="form-control" rows="4" placeholder="Provide dietary education, meal timing advice, portion control guidance, etc."></textarea>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                        <a href="diet.html" class="btn btn-outline">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Save Diet Plan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="diet-plan-add.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Lab Test - Heal Well Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>🏥</span>
+                    <span>Heal Well Hospital</span>
+                </div>
+                <div class="user-menu">
+                    <span id="userName">User</span>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container" style="max-width: 600px;">
+            <div class="card">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Add Laboratory Test</h2>
+
+                <form id="labTestForm">
+                    <div class="form-group">
+                        <label class="form-label">Select Patient *</label>
+                        <select id="patientSelect" class="form-select" required>
+                            <option value="">Select Patient</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Test Type *</label>
+                        <select id="testType" class="form-select" required>
+                            <option value="">Select Test Type</option>
+                            <option value="Blood Chemistry">Blood Chemistry</option>
+                            <option value="Pulmonary Function">Pulmonary Function</option>
+                            <option value="Urinalysis">Urinalysis</option>
+                            <option value="Hematology">Hematology</option>
+                            <option value="Microbiology">Microbiology</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Test Date *</label>
+                        <input type="date" id="testDate" class="form-control" required>
+                    </div>
+
+                    <div id="resultsFields">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Notes</label>
+                        <textarea id="notes" class="form-control" rows="3" placeholder="Additional notes or observations"></textarea>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                        <a href="laboratory.html" class="btn btn-outline">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Save Lab Test</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="shared.js"></script>
+    <script src="laboratory-add.js"></script>
+</body>
+</html>
