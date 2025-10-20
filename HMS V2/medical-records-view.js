@@ -97,6 +97,15 @@ function renderAttachedLabs(patientId) {
     container.innerHTML = html;
 }
 
+// --- THIS IS THE MISSING FUNCTION THAT WAS ADDED ---
+function canEditMedicalRecord(record) {
+    const currentUser = getCurrentUser();
+    if (currentUser.role === 'Patient') return false;
+    if (currentUser.role === 'Doctor' && record.doctorId !== currentUser.id) return false;
+    return true;
+}
+// --------------------------------------------------
+
 function updateActionButtons(record) {
     const currentUser = getCurrentUser();
     const editBtn = document.getElementById('editBtn');
@@ -241,7 +250,3 @@ function printMedicalRecord(recordId) {
     
     openPrintWindow(printHtml);
 }
-
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

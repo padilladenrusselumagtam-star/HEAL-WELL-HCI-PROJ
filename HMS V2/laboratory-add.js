@@ -120,7 +120,3 @@ function saveLabTest() {
         }, 1500);
     });
 }
-
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

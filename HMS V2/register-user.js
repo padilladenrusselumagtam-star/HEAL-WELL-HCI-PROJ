@@ -154,7 +154,3 @@ function validateRegistrationForm() {
     
     return true;
 }
-
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

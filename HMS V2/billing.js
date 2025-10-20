@@ -114,6 +114,3 @@ function processPayment(billId) {
     window.location.href = `billing-payment.html?id=${billId}`;
 }
 
-    document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

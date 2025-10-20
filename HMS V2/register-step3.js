@@ -43,7 +43,3 @@ function loadSavedData() {
         });
     }
 }
-
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

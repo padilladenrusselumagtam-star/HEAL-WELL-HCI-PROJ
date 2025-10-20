@@ -286,6 +286,3 @@ function generateDischargeSummary(record) {
     `;
 }
 
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

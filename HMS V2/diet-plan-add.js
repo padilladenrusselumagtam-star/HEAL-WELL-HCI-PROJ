@@ -153,6 +153,3 @@ function saveDietPlan() {
     });
 }
 
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

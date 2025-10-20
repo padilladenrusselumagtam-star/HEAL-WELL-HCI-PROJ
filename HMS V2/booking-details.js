@@ -180,6 +180,3 @@ function confirmBooking() {
     });
 }
 
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

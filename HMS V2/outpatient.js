@@ -62,7 +62,3 @@ function checkInPatient(appointmentId) {
         }
     });
 }
-
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

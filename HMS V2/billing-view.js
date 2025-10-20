@@ -76,6 +76,3 @@ function setupEventListeners(billId) {
     });
 }
 
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

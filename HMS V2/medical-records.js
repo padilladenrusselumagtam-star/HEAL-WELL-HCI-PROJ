@@ -131,9 +131,3 @@ function viewMedicalRecord(recordId) {
 function editMedicalRecord(recordId) {
     window.location.href = `medical-record-edit.html?id=${recordId}`;
 }
-
-    document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });
-
-    

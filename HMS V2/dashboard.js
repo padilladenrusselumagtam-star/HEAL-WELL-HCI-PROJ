@@ -144,7 +144,4 @@ function setupEventListeners() {
         });
     }
     
-    document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });
 }

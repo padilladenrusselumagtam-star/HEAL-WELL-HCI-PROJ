@@ -247,6 +247,3 @@ function getNormalRange(parameter, testType) {
     return ranges[testType]?.[parameter] || 'N/A';
 }
 
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

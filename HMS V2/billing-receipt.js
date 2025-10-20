@@ -160,7 +160,3 @@ function generateReceipt(billId) {
     
     document.write(receiptHtml);
 }
-
-document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

@@ -92,6 +92,3 @@ function editLabTest(labId) {
     window.location.href = `laboratory-edit.html?id=${labId}`;
 }
 
-    document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });

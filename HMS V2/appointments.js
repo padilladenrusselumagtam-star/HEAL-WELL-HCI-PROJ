@@ -117,7 +117,3 @@ function cancelAppointment(appointmentId) {
 
     
 }
-
-    document.getElementById('logoutBtn').addEventListener('click', function() {
-        logout();
-    });
