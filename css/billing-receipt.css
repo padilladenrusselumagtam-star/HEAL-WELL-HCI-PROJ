@@ -1,0 +1,233 @@
+/* Billing Receipt Styles */
+
+/* --- Base & Variables --- */
+:root {
+    /* Reusing colors from styles.css for consistency */
+    --primary-color: #2c5aa0;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --dark-gray: #333;
+    --light-gray: #f5f5f5;
+    --text-color: #2c3e50;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Container & Main Elements --- */
+
+.receipt-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.receipt-content {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+/* --- Header & Logo --- */
+
+.receipt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px double var(--dark-gray);
+}
+
+.receipt-logo h2 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.receipt-logo p {
+    margin: 5px 0 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.receipt-header h1 {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+/* --- Sections & Grid Layout --- */
+
+.receipt-section {
+    margin-bottom: 25px;
+    padding: 10px 0;
+}
+
+.receipt-section h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.receipt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.receipt-item {
+    font-size: 0.95rem;
+}
+
+.receipt-label {
+    font-weight: bold;
+    display: inline-block;
+    width: 150px;
+}
+
+/* --- Items Table --- */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.table th {
+    background-color: var(--light-gray);
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+/* --- Summary --- */
+
+.summary-grid {
+    max-width: 350px;
+    margin-left: auto;
+    border: 1px solid var(--border-color);
+    border-top: none;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-top: 1px dashed var(--border-color);
+    font-size: 1rem;
+}
+
+.summary-item span:first-child {
+    font-weight: 500;
+}
+
+.summary-item.total {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top: 2px solid var(--primary-color); /* Double border effect */
+}
+
+/* --- Footer & Actions --- */
+
+.receipt-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.receipt-footer p {
+    margin: 5px 0;
+}
+
+.receipt-actions {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Button Styles (Reusing existing classes for simplicity) */
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* --- Print Styles --- */
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+    
+    .receipt-container {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+    
+    .receipt-header {
+        /* Hide the print button when printing */
+        justify-content: center;
+    }
+    
+    .receipt-header button,
+    .receipt-actions,
+    .top-nav {
+        display: none !important;
+    }
+
+    .receipt-content {
+        border: 2px solid var(--dark-gray);
+        padding: 20px;
+    }
+    
+    .summary-grid {
+        border: 1px solid var(--dark-gray);
+    }
+
+    .table th, .table td {
+        border: 1px solid #000;
+    }
+}
