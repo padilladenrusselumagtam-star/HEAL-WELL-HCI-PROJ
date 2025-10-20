@@ -241,3 +241,7 @@ function printMedicalRecord(recordId) {
     
     openPrintWindow(printHtml);
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

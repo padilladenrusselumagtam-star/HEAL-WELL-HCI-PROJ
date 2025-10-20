@@ -121,3 +121,7 @@ function initiateDischarge(patientId) {
         window.location.href = `discharge.html?patientId=${patientId}`;
     }
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

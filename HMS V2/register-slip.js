@@ -121,3 +121,7 @@ function printSlip() {
     `);
     printWindow.document.close();
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

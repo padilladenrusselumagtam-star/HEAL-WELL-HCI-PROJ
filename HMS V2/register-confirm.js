@@ -190,3 +190,7 @@ function generateRegistrationSlip(patient) {
         </html>
     `;
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

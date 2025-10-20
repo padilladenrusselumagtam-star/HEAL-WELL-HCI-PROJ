@@ -209,3 +209,7 @@ function printDietPlan(planId) {
     
     openPrintWindow(printHtml);
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

@@ -285,3 +285,7 @@ function generateDischargeSummary(record) {
         </html>
     `;
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

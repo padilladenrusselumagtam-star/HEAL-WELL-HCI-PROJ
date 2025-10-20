@@ -105,3 +105,7 @@ function formatDischargeCondition(condition) {
     };
     return conditions[condition] || condition;
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

@@ -75,3 +75,7 @@ function setupEventListeners(billId) {
         window.location.href = 'billing.html';
     });
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

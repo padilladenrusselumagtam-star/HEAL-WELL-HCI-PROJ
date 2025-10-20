@@ -38,3 +38,7 @@ function loadPackages() {
 function selectPackage(packageId) {
     window.location.href = `booking-details.html?pkg=${packageId}`;
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

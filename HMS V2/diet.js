@@ -100,3 +100,7 @@ function viewDietPlan(planId) {
 function editDietPlan(planId) {
     window.location.href = `diet-plan-edit.html?id=${planId}`;
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

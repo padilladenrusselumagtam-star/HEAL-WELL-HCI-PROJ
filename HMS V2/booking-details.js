@@ -179,3 +179,7 @@ function confirmBooking() {
         }, 1000);
     });
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });

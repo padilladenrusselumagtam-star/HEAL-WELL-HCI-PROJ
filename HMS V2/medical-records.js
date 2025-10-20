@@ -135,3 +135,5 @@ function editMedicalRecord(recordId) {
     document.getElementById('logoutBtn').addEventListener('click', function() {
         logout();
     });
+
+    

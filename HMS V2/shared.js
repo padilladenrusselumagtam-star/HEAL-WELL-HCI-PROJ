@@ -196,3 +196,7 @@ function logout() {
     sessionStorage.removeItem('hwh_session');
     window.location.href = 'login.html';
 }
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+        logout();
+    });
